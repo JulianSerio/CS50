@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/** NAV **/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex ;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 400px ) {
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/** FIN DEL NAV **/
+
+/** Header **/
+
+.absolute {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute ;
+    background: rgba(0, 0, 0,0.5) ;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 900;
+    z-index: 100;
+    color:white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1::after {
+    display: block;
+    width: 30%;
+    height: 10px;
+    content: "";
+    margin: auto;
+    background-color: white;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and(max-width: 500px){
+    h1{
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+
+
+}
+/** Fin del header**/
+
+/** Imagenes y video **/
+
+video {
+    width: 100%;
+}
+
+
+.imgJuli {
+    width: 250px;
+    height: auto;
+    display:block;
+    border-radius: 50%;
+    box-shadow: 3px 4px 0px #ccc ;
+    float: right;
+}
+
+/** fin de Imagenes y video **/
+
+#about,#projects,#contact  {
+    color: black;
+    font-size: 300%;
+    text-align: center;
+}
+
+.contactJuli {
+    text-align: right;
+
+}
+
